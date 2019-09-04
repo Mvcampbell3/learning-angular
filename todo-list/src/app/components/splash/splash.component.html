@@ -2,10 +2,7 @@
   <h2>{{title}}</h2>
   <div class="todoContainer">
     <div *ngFor="let todo of todos">
-      <p>{{todo.task}}</p>
-      <p *ngIf="todo.completed === true">True</p>
-      <p *ngIf="todo.completed === false">False</p>
-      <button (click)="handleComplete()">Complete</button>
+      <app-todo-item task={{todo.task}} completed={{todo.completed}}></app-todo-item>
     </div>
   </div>
 </div>
